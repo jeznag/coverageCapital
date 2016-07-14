@@ -1,0 +1,851 @@
+:root {
+    --green-chart-colour: #90be09;
+    --red-chart-colour: #cc443d;
+    --orange-chart-color: #d4ac20;
+    --grey-chart-color: lightgrey;
+}
+
+html,body {
+    color: #444;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial',open-sans;
+    height: 100%;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+header {
+    margin-top: 15px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.negativeMarginTopSm {
+    margin-top: -25px;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.navbar-brand {
+    height: 60px;
+}
+
+.carousel-control {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: var(--red-chart-colour);
+    border-color: var(--red-chart-colour);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    background-image: initial;
+    opacity: 1;
+}
+
+.carousel-control:hover {
+    background-color: #0074bc;
+    color: #fff;
+    text-decoration: none;
+}
+
+.carousel-inner {
+    padding-bottom: 25px;
+}
+
+.carousel-indicators {
+    display: none;
+    visibility: hidden;
+}
+
+.carousel-control {
+    position: relative;
+    width: 30%;
+}
+
+.sec-padding {
+    padding-top: 40PX;
+    padding-bottom: 100px;
+}
+
+.animate-effect {
+    padding-top: 40PX;
+    padding-bottom: 100px;
+}
+
+.animate-effect .overlay {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/giphy.gif);
+    position: absolute;
+    z-index: 1;
+    margin-top: -142px;
+}
+
+.animate-effect #overlay {
+    opacity: 0;
+    -webkit-animation: fadein 6s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 6s;
+/* Firefox < 16 */
+    -ms-animation: fadein 6s;
+/* Internet Explorer */
+    -o-animation: fadein 6s;
+/* Opera < 12.1 */
+    animation: fadein 6s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.modal-content {
+    margin-top: 0;
+}
+
+.chart {
+    width: 100%;
+}
+
+.chart li {
+    border-radius: 4px 4px 0 0;
+/* Remember vendor prefixes */
+    box-shadow: 0 1px 0 0 rgba(255,255,255,.6) inset;
+/* Remember vendor prefixes */
+    display: block;
+    height: 125px;
+    padding: 25px 0;
+    position: relative;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.chart .axis {
+    display: none;
+    top: -25px;
+    width: 11%;
+}
+
+.chart .head {
+    background: #eaeaea;
+    margin: -.6em 0 72px;
+}
+
+.chart .percent {
+    font-size: 30px;
+    letter-spacing: -3px;
+    width: 100%;
+    color: #fff;
+}
+
+.chart span {
+    font-size: 30px;
+}
+
+.flex-center {
+    display: flex;
+    -webkit-justify-content: center; /* Safari */
+    justify-content: center;
+}
+
+.chart .react {
+    height: 88%;
+    background-color: var(--green-chart-colour);
+    border: 1px solid var(--green-chart-colour);
+}
+
+.animate-effect .bar {
+    height: 0% !important;
+}
+
+.chart .express {
+    height: 100%;
+    background-color: var(--green-chart-colour);
+    border: 1px solid var(--green-chart-colour);
+}
+
+.chart .jQueryMobile {
+    height: 42%;
+    background-color: var(--orange-chart-color);
+    border: 1px solid var(--orange-chart-color);
+}
+
+.chart .backbone {
+    height: 31%;
+    background-color: var(--grey-chart-color);
+    border: 1px solid var(--grey-chart-color);
+}
+
+.navbar-brand {
+    padding: 10px 15px;
+}
+
+.fade {
+    -webkit-transition-delay: 4s;
+/* Safari */
+    transition-delay: 4s;
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transition-delay: 3s;
+    /* Safari */
+    transition-delay: 3s;
+}
+
+.modal {
+    background-image: url(../images/hacked.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 700px) {
+
+    .chart {
+        background: url(../images/chart.png) right top repeat-x;
+        height: 425px;
+        margin-top: 40px;
+    }
+
+    .chart li {
+        display: inline-block;
+        height: 425px;
+        margin: 0 1.8% 0 0;
+        width: 14%;
+    }
+
+    .chart .axis {
+        display: inline-block;
+    }
+
+    .chart .percent {
+        font-size: 40px;
+        position: absolute;
+    }
+
+    .chart .skill p {
+        bottom: 20px;
+        font-size: 20px;
+        position: absolute;
+        left: 20px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .up-data {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+        background-color: var(--red-chart-colour);
+        border-color: var(--red-chart-colour);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 5px;
+    }
+
+    .up-data:hover {
+        background-color: #0074bc;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @media (min-width: 1000px) {
+    .chart .percent {
+        font-size: 62px;
+    }
+}
+
+/* --------- Animation Effects -------------- */
+#react {
+    -webkit-animation: react 3s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: react 3s;
+/* Firefox < 16 */
+    -ms-animation: react 3s;
+/* Internet Explorer */
+    -o-animation: react 3s;
+/* Opera < 12.1 */
+    animation: react 3s;
+}
+
+@keyframes react {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 88%;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes react {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 55%;
+    }
+}
+
+.animate-effect #react {
+    background-color: var(--red-chart-colour);
+    border: 1px solid var(--red-chart-colour);
+
+    -webkit-animation: chartDown 6s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: chartDown 6s;
+/* Firefox < 16 */
+    -ms-animation: chartDown 6s;
+/* Internet Explorer */
+    -o-animation: chartDown 6s;
+/* Opera < 12.1 */
+    animation: chartDown 6s;
+    -webkit-animation-delay: 2s;
+/* Safari */
+    animation-delay: 2s;
+}
+
+@keyframes chartDown {
+    from {
+        height: 88%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes chartDown {
+    from {
+        height: 88%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes chartDown {
+    from {
+        height: 88%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes chartDown {
+    from {
+        height: 88%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes chartDown {
+    from {
+        height: 88%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+#backbone {
+    -webkit-animation: backbone 3s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: backbone 3s;
+/* Firefox < 16 */
+    -ms-animation: backbone 3s;
+/* Internet Explorer */
+    -o-animation: backbone 3s;
+/* Opera < 12.1 */
+    animation: backbone 3s;
+}
+
+@keyframes backbone {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 31%;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes backbone {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 31%;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes backbone {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 31%;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes backbone {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 31%;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes backbone {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 31%;
+    }
+}
+
+.animate-effect #backbone {
+    background-color: var(--red-chart-colour);
+    border: 1px solid var(--red-chart-colour);
+
+    -webkit-animation: backboneDown 6s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: backboneDown 6s;
+/* Firefox < 16 */
+    -ms-animation: backboneDown 6s;
+/* Internet Explorer */
+    -o-animation: backboneDown 6s;
+/* Opera < 12.1 */
+    animation: backboneDown 6s;
+    -webkit-animation-delay: 2s;
+/* Safari */
+    animation-delay: 2s;
+}
+
+@keyframes backboneDown {
+    from {
+        height: 31%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes backboneDown {
+    from {
+        height: 31%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes backboneDown {
+    from {
+        height: 31%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes backboneDown {
+    from {
+        height: 31%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes backboneDown {
+    from {
+        height: 31%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+#jQueryMobile {
+    -webkit-animation: jQueryMobile 3s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: jQueryMobile 3s;
+/* Firefox < 16 */
+    -ms-animation: jQueryMobile 3s;
+/* Internet Explorer */
+    -o-animation: jQueryMobile 3s;
+/* Opera < 12.1 */
+    animation: jQueryMobile 3s;
+}
+
+@keyframes jQueryMobile {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 42%;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes jQueryMobile {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 42%;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes jQueryMobile {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 42%;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes jQueryMobile {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 42%;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes jQueryMobile {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 42%;
+    }
+}
+
+.animate-effect #jQueryMobile {
+
+    background-color: var(--red-chart-colour);
+    border: 1px solid var(--red-chart-colour);
+
+    -webkit-animation: jqueryMobileDown 6s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: jqueryMobileDown 6s;
+/* Firefox < 16 */
+    -ms-animation: jqueryMobileDown 6s;
+/* Internet Explorer */
+    -o-animation: jqueryMobileDown 6s;
+/* Opera < 12.1 */
+    animation: jqueryMobileDown 6s;
+    -webkit-animation-delay: 2s;
+/* Safari */
+    animation-delay: 2s;
+}
+
+@keyframes jqueryMobileDown {
+    from {
+        height: 42%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes jqueryMobileDown {
+    from {
+        height: 42%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes jqueryMobileDown {
+    from {
+        height: 42%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes jqueryMobileDown {
+    from {
+        height: 42%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes jqueryMobileDown {
+    from {
+        height: 42%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+#express {
+    -webkit-animation: express 3s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: express 3s;
+/* Firefox < 16 */
+    -ms-animation: express 3s;
+/* Internet Explorer */
+    -o-animation: express 3s;
+/* Opera < 12.1 */
+    animation: express 3s;
+}
+
+@keyframes express {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes express {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes express {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes express {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes express {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+.animate-effect #express {
+    background-color: var(--red-chart-colour);
+    border: 1px solid var(--red-chart-colour);
+
+    -webkit-animation: expressDown 6s;
+/* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: expressDown 6s;
+/* Firefox < 16 */
+    -ms-animation: expressDown 6s;
+/* Internet Explorer */
+    -o-animation: expressDown 6s;
+/* Opera < 12.1 */
+    animation: expressDown 6s;
+    -webkit-animation-delay: 2s;
+/* Safari */
+    animation-delay: 2s;
+}
+
+@keyframes expressDown {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes expressDown {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes expressDown {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes expressDown {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes expressDown {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+/* ---------- End Animation ----------- */
+.footer {
+    padding-top: 20px;
+    padding-bottom: 0;
+    position: relative;
+    background-color: #13181e;
+}
+
+.footer-nav {
+    background-color: transparent;
+    border-color: transparent;
+}
