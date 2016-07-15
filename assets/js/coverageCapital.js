@@ -7,10 +7,10 @@ $(document).ready(function(){
 var audio = new Audio('./assets/sound/Power-down-sound-effect.mp3');
 
 function addUpdateDataButtonClickListener() {
-    $("button").click(function() {
+    $('[data-target="#videoModal"]').click(function() {
         playPowerDownEffect();
-        $(".sec-padding").removeClass("sec-padding");
-        $("section").addClass("animate-effect");
+        $('.sec-padding').removeClass('sec-padding');
+        $('section').addClass('animate-effect');
     });
 }
 
@@ -20,15 +20,15 @@ function playPowerDownEffect() {
 }
 
 function hideVideoUntilModalOpened() {
-    var url = $("#video-hack").attr('src');
-    $("#video-hack").attr('src', '');
-    $("#videoModal").on('shown.bs.modal', function() {
-        $("#video-hack").attr('src', url);
+    var url = $('#video-hack').attr('src');
+    $('#video-hack').attr('src', '');
+    $('#videoModal').on('shown.bs.modal', function() {
+        $('#video-hack').attr('src', url);
     });
 }
 
 function hideVideoWhenModalClosed() { 
-    $("#videoModal").on('hide.bs.modal', function(){
-        $("#video-hack").attr('src', '');
+    $('#videoModal').on('hide.bs.modal', function(){
+        $('#video-hack').attr('src', '');
     });
 }
