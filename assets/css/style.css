@@ -215,10 +215,6 @@ header {
     border: 1px solid var(--green-chart-colour);
 }
 
-.animate-effect .bar {
-    height: 0% !important;
-}
-
 .chart .express {
     height: 100%;
     background-color: var(--green-chart-colour);
@@ -316,41 +312,45 @@ header {
     }
 }
 
+
 /* --------- Animation Effects -------------- */
-#react {
-    -webkit-animation: react 3s;
+#react, #express, #jQueryMobile, #backbone {
+    -webkit-animation: chartUp 3s;
 /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: react 3s;
+    -moz-animation: chartUp 3s;
 /* Firefox < 16 */
-    -ms-animation: react 3s;
+    -ms-animation: chartUp 3s;
 /* Internet Explorer */
-    -o-animation: react 3s;
+    -o-animation: chartUp 3s;
 /* Opera < 12.1 */
-    animation: react 3s;
+    animation: chartUp 3s;
 }
 
-@keyframes react {
+@keyframes chartUp {
     from {
         height: 0;
     }
 
     to {
-        height: 88%;
+        height: attr(height);
     }
 }
 
 /* Opera < 12.1 */
-@-o-keyframes react {
+@-o-keyframes chartUp {
     from {
         height: 0;
     }
 
     to {
-        height: 55%;
+        height: attr(height);
     }
 }
 
-.animate-effect #react {
+.animate-effect #react,
+.animate-effect #express,
+.animate-effect #jQueryMobile,
+.animate-effect #backbone {
     background-color: var(--red-chart-colour);
     border: 1px solid var(--red-chart-colour);
 
@@ -363,14 +363,22 @@ header {
     -o-animation: chartDown 6s;
 /* Opera < 12.1 */
     animation: chartDown 6s;
+    /* Safari */
     -webkit-animation-delay: 2s;
-/* Safari */
     animation-delay: 2s;
+
+
+   /*Keep final value at end*/
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
 }
 
 @keyframes chartDown {
     from {
-        height: 88%;
+        height: attr(height);
     }
 
     to {
@@ -381,7 +389,7 @@ header {
 /* Firefox < 16 */
 @-moz-keyframes chartDown {
     from {
-        height: 88%;
+        height: attr(height);
     }
 
     to {
@@ -392,7 +400,7 @@ header {
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes chartDown {
     from {
-        height: 88%;
+        height: attr(height);
     }
 
     to {
@@ -403,7 +411,7 @@ header {
 /* Internet Explorer */
 @-ms-keyframes chartDown {
     from {
-        height: 88%;
+        height: attr(height);
     }
 
     to {
@@ -414,422 +422,7 @@ header {
 /* Opera < 12.1 */
 @-o-keyframes chartDown {
     from {
-        height: 88%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-#backbone {
-    -webkit-animation: backbone 3s;
-/* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: backbone 3s;
-/* Firefox < 16 */
-    -ms-animation: backbone 3s;
-/* Internet Explorer */
-    -o-animation: backbone 3s;
-/* Opera < 12.1 */
-    animation: backbone 3s;
-}
-
-@keyframes backbone {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 31%;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes backbone {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 31%;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes backbone {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 31%;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes backbone {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 31%;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes backbone {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 31%;
-    }
-}
-
-.animate-effect #backbone {
-    background-color: var(--red-chart-colour);
-    border: 1px solid var(--red-chart-colour);
-
-    -webkit-animation: backboneDown 6s;
-/* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: backboneDown 6s;
-/* Firefox < 16 */
-    -ms-animation: backboneDown 6s;
-/* Internet Explorer */
-    -o-animation: backboneDown 6s;
-/* Opera < 12.1 */
-    animation: backboneDown 6s;
-    -webkit-animation-delay: 2s;
-/* Safari */
-    animation-delay: 2s;
-}
-
-@keyframes backboneDown {
-    from {
-        height: 31%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes backboneDown {
-    from {
-        height: 31%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes backboneDown {
-    from {
-        height: 31%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes backboneDown {
-    from {
-        height: 31%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes backboneDown {
-    from {
-        height: 31%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-#jQueryMobile {
-    -webkit-animation: jQueryMobile 3s;
-/* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: jQueryMobile 3s;
-/* Firefox < 16 */
-    -ms-animation: jQueryMobile 3s;
-/* Internet Explorer */
-    -o-animation: jQueryMobile 3s;
-/* Opera < 12.1 */
-    animation: jQueryMobile 3s;
-}
-
-@keyframes jQueryMobile {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 42%;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes jQueryMobile {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 42%;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes jQueryMobile {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 42%;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes jQueryMobile {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 42%;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes jQueryMobile {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 42%;
-    }
-}
-
-.animate-effect #jQueryMobile {
-
-    background-color: var(--red-chart-colour);
-    border: 1px solid var(--red-chart-colour);
-
-    -webkit-animation: jqueryMobileDown 6s;
-/* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: jqueryMobileDown 6s;
-/* Firefox < 16 */
-    -ms-animation: jqueryMobileDown 6s;
-/* Internet Explorer */
-    -o-animation: jqueryMobileDown 6s;
-/* Opera < 12.1 */
-    animation: jqueryMobileDown 6s;
-    -webkit-animation-delay: 2s;
-/* Safari */
-    animation-delay: 2s;
-}
-
-@keyframes jqueryMobileDown {
-    from {
-        height: 42%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes jqueryMobileDown {
-    from {
-        height: 42%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes jqueryMobileDown {
-    from {
-        height: 42%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes jqueryMobileDown {
-    from {
-        height: 42%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes jqueryMobileDown {
-    from {
-        height: 42%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-#express {
-    -webkit-animation: express 3s;
-/* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: express 3s;
-/* Firefox < 16 */
-    -ms-animation: express 3s;
-/* Internet Explorer */
-    -o-animation: express 3s;
-/* Opera < 12.1 */
-    animation: express 3s;
-}
-
-@keyframes express {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes express {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes express {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes express {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes express {
-    from {
-        height: 0;
-    }
-
-    to {
-        height: 100%;
-    }
-}
-
-.animate-effect #express {
-    background-color: var(--red-chart-colour);
-    border: 1px solid var(--red-chart-colour);
-
-    -webkit-animation: expressDown 6s;
-/* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: expressDown 6s;
-/* Firefox < 16 */
-    -ms-animation: expressDown 6s;
-/* Internet Explorer */
-    -o-animation: expressDown 6s;
-/* Opera < 12.1 */
-    animation: expressDown 6s;
-    -webkit-animation-delay: 2s;
-/* Safari */
-    animation-delay: 2s;
-}
-
-@keyframes expressDown {
-    from {
-        height: 100%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes expressDown {
-    from {
-        height: 100%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes expressDown {
-    from {
-        height: 100%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Internet Explorer */
-@-ms-keyframes expressDown {
-    from {
-        height: 100%;
-    }
-
-    to {
-        height: 0;
-    }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes expressDown {
-    from {
-        height: 100%;
+        height: attr(height);
     }
 
     to {
