@@ -4,6 +4,8 @@ $(document).ready(function(){
     hideVideoWhenModalClosed();
 });
 
+var audio = new Audio('./assets/sound/Power-down-sound-effect.mp3');
+
 function addUpdateDataButtonClickListener() {
     $("button").click(function() {
         playPowerDownEffect();
@@ -13,7 +15,6 @@ function addUpdateDataButtonClickListener() {
 }
 
 function playPowerDownEffect() {
-    var audio = new Audio('./assets/sound/Power-down-sound-effect.mp3');
     audio.volume = 0.5;
     audio.play();
 }
