@@ -442,3 +442,7 @@ header {
     background-color: transparent;
     border-color: transparent;
 }
+
+.padding-bottom-sm {
+    padding-bottom: 10px;
+}
